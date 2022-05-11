@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário FreeGym</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, rgb(32, 178, 170), rgb(0, 128, 128));
+        }
+
+        .box {
+            color: rgb(255, 255, 255);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            border-radius: 15px;
+            width: 20%;
+        }
+
+        fieldset {
+            border: 3px solid silver;
+        }
+
+        legend {
+            border: 1px solid silver;
+            padding: 10px;
+            text-align: center;
+            background-color: silver;
+            border-radius: 20px;
+            color: black;
+        }
+
+        .inputBox {
+            position: relative;
+        }
+
+        .inputUser {
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 1.5px;
+        }
+
+        .labelInput {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        .inputUser:focus~.labelInput,
+        .inputUser:valid~.labelInput {
+            top: -20px;
+            font-size: 12px;
+        }
+
+        #submit {
+            border: none;
+            padding: 10px;
+            text-align: center;
+            background-color: silver;
+            border-radius: 20px;
+            color: black;
+            font-size: 20px;
+            width: 100%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <form action="">
+            <fieldset>
+                <legend><b>Formulário de Pesquisa</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="email" name="email" id="email" class="inputUser" required>
+                    <label for="email" class="labelInput">Email</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="number" name="idade" id="idade" class="inputUser" required>
+                    <label for="idade" class="labelInput">Idade</label>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="profissao" id="profissao" class="inputUser" required>
+                        <label for="profissao" class="labelInput">Profissão</label>
+                    </div>
+                    <br>
+                    <p>Sexo:</p>
+                    <input type="radio" id="feminino" name="genero" value="feminino" required>
+                    <label for="feminino">Feminino</label>
+                    <input type="radio" id="masculino" name="genero" value="masculino" required>
+                    <label for="masculino">Masculino</label>
+                    <input type="radio" id="outros" name="genero" value="outros" required>
+                    <label for="outros">Outros</label>
+                    <div>
+                        <br>
+                        <div>
+                            <p>Estado Civil:</p>
+                            <input type="radio" id="solteiro" name="estado_civil" value="solteiro" required>
+                            <label for="solteiro">Solteiro(a)</label>
+                            <input type="radio" id="casado" name="estado_civil" value="casado" required>
+                            <label for="casado">Casado(a)</label>
+                            <input type="radio" id="divorciado" name="estado_civil" value="divorciado" required>
+                            <label for="divorciado">Divorciado(a)</label><br>
+                            <input type="radio" id="viuvo" name="estado_civil" value="viuvo" required>
+                            <label for="viuvo">Viuvo(a)</label>
+
+
+
+                        </div>
+                        <div>
+                            <p>Faixa de renda:</p>
+                            <input type="radio" id="salario1" name="salario" value="salario1" required>
+                            <label for="salario1">Até 1(um) salário minimo</label><br>
+                            <input type="radio" id="salario2" name="salario" value="salario2" required>
+                            <label for="salario2">Até 3(três) salários minimo</label><br>
+                            <input type="radio" id="salario3" name="salario" value="salario3" required>
+                            <label for="salario3">Até 5(cinco) salários minimo</label><br>
+                            <input type="radio" id="salario4" name="salario" value="salario4" required>
+                            <label for="salario4">Maior que 7(sete) salários minimo</label><br>
+                        </div>
+                        <br>
+
+
+                        <div class="inputBox">
+                            <input type="text" name="cidade" id="cidade" class="inputUser" required>
+                            <label for="cidade" class="labelInput">Cidade</label>
+                        </div>
+                        <br>
+                        <div class="inputBox">
+                            <input type="text" name="estado" id="estado" class="inputUser" required>
+                            <label for="estado" class="labelInput">Estado</label>
+                        </div>
+                        <br>
+                        <div>
+                            <p>Pratica alguma atividade fisíca?:</p>
+                            <input type="radio" name="atividade" value="sim" required>
+                            <label for="sim">Sim</label>
+                            <input type="radio" name="atividade" value="nao" required>
+                            <label for="nao">Não</label>
+                        </div>
+                        <div>
+                            <p>Onde compra suplementos/artigos fitness?:</p>
+                            <input type="radio" name="compras" value="online" required>
+                            <label for="online">Online</label>
+                            <input type="radio" name="compras" value="fisica" required>
+                            <label for="fisica">Loja Fisica</label>
+                        </div>
+                        <p>Prefere academias:</p>
+                        <input type="radio" name="academias" value="bairro" required>
+                        <label for="bairro">Bairro</label>
+                        <input type="radio" name="academias" value="redes" required>
+                        <label for="redes">Redes</label><br><br><br>
+                        <div class="inputBox">
+                            <input type="text" name="diferencial" id="diferencial" class="inputUser" required>
+                            <label for="diferencial" class="labelInput">Para você, qual o maior diferencial em uma
+                                academia?</label>
+
+                        </div>
+                        <div>
+                            <p>Assinaria uma plataforma, que você pudesse escolher qualquer academia para usar no dia?
+                            </p>
+                            <input type="radio" name="atividade" value="afirmativo" required>
+                            <label for="sim">Sim</label>
+                            <input type="radio" name="atividade" value="negacao" required>
+                            <label for="nao">Não</label>
+                        </div>
+                        <br>
+                        <div>
+                            <p>Qual plano melhor lhe convém?</p>
+                            <input type="radio" id="plano1" name="plano" value="plano" required>
+                            <label for="plano1">R$169.00/mês</label>
+                            <input type="radio" id="plano2" name="plano" value="plano" required>
+                            <label for="plano2">R$359.00/trimestral</label>
+                            <br><br>
+                            <input type="radio" id="plano3" name="plano" value="plano" required>
+                            <label for="plano3">R$649.00/semestral</label>
+                            <input type="radio" id="plano4" name="plano" value="plano" required>
+                            <label for="plano4">R$999.00/anual</label>
+                        </div>
+                        <br><br>
+                        <input type="submit" name="submit" id="submit">
+            </fieldset>
+        </form>
+
+
+
+    </div>
+</body>
+
+</html>
